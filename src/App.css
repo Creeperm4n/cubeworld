@@ -1,0 +1,252 @@
+/*#region*/
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* I added this */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*#endregion*/
+
+@font-face {
+  font-family: 'roboto-mono';
+  src: url(./fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+:root {
+  font-family: sans-serif;
+}
+
+/* 
+================================
+Generic Elements
+================================
+*/
+
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.twoColumns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: calc(25px + 2vw);
+  border-bottom: 1px solid #892cdc;
+  margin: 1rem 0;
+}
+
+.leftColumn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 3 1 66%;
+}
+
+.scrambler-and-timer {
+  text-align: center;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px;
+  width: 80%;
+  min-width: 300px;
+}
+
+.scramble {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.timer {
+  border-bottom: 2px solid #892cdc;
+  border-top: 2px solid #892cdc;
+  font-size: calc(40px + 5vw);
+  font-family: 'roboto-mono';
+  font-weight: 400;
+  margin: 15px 0;
+  padding: 1rem 0;
+}
+
+em {
+  color: #892cdc;
+}
+
+.rightColumn {
+  align-items: center;
+  display: flex;
+  flex: 1 1 33%;
+  justify-content: center;
+}
+
+.timesAndSettings {
+  align-items: center;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.clearAll {
+  background-color: #892cdc;
+  color: white;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: background-color .4s ease, color .4s ease;
+  width: 100%;
+}
+
+.clearAll:hover {
+  background-color: white;
+  color: #892cdc;
+  cursor: pointer;
+}
+
+.timesTable {
+  background-color: white;
+  color: black;
+  height: 200px;
+  margin-bottom: 10px;
+  width: 300px;
+  overflow-y:auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.times {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.bestTime {
+  color: #892cdc;
+}
+
+.worstTime {
+  color: orangered;
+}
+
+.deleteButton {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-left: 5px;
+  transition: background-color .2s ease, color .2s ease;
+  padding: 5px;
+}
+
+.deleteButton:hover {
+  background-color: #892cdc;
+  color: white;
+  cursor: pointer;
+}
+
+.stats {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.inspectionSwitch {
+  margin-bottom: 5px;
+}
+
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.footerItem {
+  margin: 0 10px;
+}
+
+footer a {
+  color: #892cdc;
+}
